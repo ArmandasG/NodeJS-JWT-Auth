@@ -47,3 +47,7 @@ module.exports.login_post = async (req, res) => {
     console.log(email, password)
     res.send('user login');
 }
+
+// module.exports.forgot_get = (req, res) => {
+//     res.render('forgot')
+// }
