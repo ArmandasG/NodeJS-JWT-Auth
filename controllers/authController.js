@@ -78,6 +78,16 @@ module.exports.login_post = async (req, res) => {
         res.status(400).json({errors})
     }
 }
+// Alternate method
+// module.exports.logout_get = (req, res) => {
+//     res.cookie('jwt', '', {maxAge: 1});
+//     res.redirect('/')
+// }
+
+module.exports.logout_get = (req, res) => {
+    res.clearCookie('jwt');
+    res.redirect('/');
+}
 
 // module.exports.forgot_get = (req, res) => {
 //     res.render('forgot')
